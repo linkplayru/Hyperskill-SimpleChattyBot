@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class SimpleBot {
-    final static Scanner scanner = new Scanner(System.in);
+    final static Scanner scanner = new Scanner(System.in); // Do not change this line
 
     public static void main(String[] args) {
-        greet("BOT", "2019");
+        greet("Aid", "2018"); // change it as you need
         remindName();
         guessAge();
         count();
@@ -42,24 +42,23 @@ public class SimpleBot {
     }
 
     static void test() {
-        System.out.println("Let's test your programming knowledge.\n" +
-        "Why do we use methods?\n" +
-        "1. To repeat a statement multiple times.\n" +
-        "2. To decompose a program into several small subroutines.\n" +
-        "3. To determine the execution time of a program.\n" +
-        "4. To interrupt the execution of a program.");
-        boolean right = false;
-        while (!right) {
-            if (scanner.nextInt() == 2) {
-                right = true;
-            } else {
+        System.out.println("Let's test your programming knowledge.");
+        System.out.println("Why do we use methods?");
+        System.out.println("1. To repeat a statement multiple times.");
+        System.out.println("2. To decompose a program into several small subroutines.");
+        System.out.println("3. To determine the execution time of a program.");
+        System.out.println("4. To interrupt the execution of a program.");
+        int answer = -1;
+        while (answer != 2) {
+            answer = scanner.nextInt();
+            if (answer != 2) {
                 System.out.println("Please, try again.");
             }
         }
-        
+        System.out.println("Completed, have a nice day!");
     }
 
     static void end() {
-        System.out.println("Congratulations, have a nice day!");
+        System.out.println("Congratulations, have a nice day!"); // Do not change this text
     }
 }
